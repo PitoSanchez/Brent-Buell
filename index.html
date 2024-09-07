@@ -2,14 +2,128 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Brent Buell</title>
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="/main.js"></script>
   </head>
   <body>
-    <div class="container bg-black">
-      <h1>Brent Buell</h1>
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+      <div class="hero-left">
+        <h1 class="hero-title brent">BRENT</h1>
+        <h2 class="hero-title buell">BUELL</h2>
+        <p class="hero-paragraph">
+          <span id="dynamic-words"></span>
+        </p>
+      </div>
+      <div class="menu-button">
+        <button class="menu-button" onclick="toggleMenu()">MENU</button>
+      </div>
+      <div class="hero-right">
+        <img src="BB.png" alt="Brent Buell Image" class="hero-image" />
+      </div>
     </div>
+
+    <!-- Menu Page (Initially Hidden) -->
+    <div class="menu-page" id="menuPage" style="display: none">
+      <ul class="menu-list">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+        <li><a href="#cubes" onclick="toggleMenu()">Cubes</a></li>
+        <li><a href="#spots" onclick="toggleMenu()">Spots</a></li>
+        <li><a href="#news-articles" onclick="toggleMenu()">News</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- About Section -->
+    <!-- <div class="about-section" id="about">
+      <div class="panel panel-1">
+        <h1>THEATER & TRANSFORMATION</h1>
+        <p>
+          Brent Buell is a playwright, producer, director, and novelist. He
+          co-produced A24’s movie <em>Sing Sing</em>. For ten years, Buell
+          directed theater with Rehabilitation Through the Arts (RTA) in New
+          York’s maximum-security prisons, working on plays ranging from
+          <em>Of Mice and Men</em> to original works by prisoners. His work has
+          been praised by critics, including The New York Times. His play
+          <em>Breakin’ the Mummy’s Code</em>, premiered inside Sing Sing and
+          inspired A24’s <em>Sing Sing</em>.
+        </p>
+      </div>
+      <div class="panel panel-2">
+        <h1>CREATIVE IMPACT</h1>
+        <p>
+          Buell’s contributions extend to creating impactful theater, such as
+          <em>The Gem Exchange</em>, <em>Wood Bars</em>, and the Las Vegas
+          spectacle <em>Undone Divas</em>. He has directed numerous works,
+          including <em>unFRAMED</em> by Iyaba Ibo Mandingo,
+          <em>From Sing Sing to Broadway</em>, and
+          <em>The Gospel According to Josh</em>. His directorial work is
+          recognized for its ability to transcend boundaries and create
+          meaningful narratives.
+        </p>
+      </div>
+      <div class="panel panel-3">
+        <h1>STORYTELLING LEGACY</h1>
+        <p>
+          Buell’s storytelling continues through his novels, including the
+          political parody <em>Rapturous</em> and
+          <em>Daniel and My Revelation</em>. His memoir,
+          <em>Sing Sing Backstage</em>, documenting his years directing theater
+          in prison, is set to be published. Buell's career showcases the
+          transformative power of theater, with evidence showing less than 3% of
+          RTA members returning to prison, compared to over 60% nationally.
+        </p>
+      </div>
+    </div> -->
+
+    <!-- Contact Section -->
+    <!-- <section class="section contact-form" id="contact">
+      <form
+        action="mailto:info@brentbuell.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="company" class="form-label">Company</label>
+          <input type="text" class="form-control" id="company" name="company" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+  </body>
+</html> -->
   </body>
 </html>
