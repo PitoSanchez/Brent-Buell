@@ -7,7 +7,6 @@ function toggleMenu() {
     }
 }
 
-
 // JavaScript for dynamic words
 const words = ['PRODUCER', 'NOVELIST', 'PLAYWRIGHT', 'DIRECTOR'];
 let currentIndex = 0;

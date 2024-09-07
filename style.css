@@ -19,6 +19,23 @@ html {
   color: #fff;
   padding: 0 6rem;
   position: relative;
+  flex-direction: row;
+}
+
+/* Center the menu button at the top */
+.menu-button {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: white;
+  font-family: "Anton", sans-serif;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 3rem;
+  z-index: 5; /* Ensure it stays above other content */
 }
 
 .hero-left {
@@ -84,16 +101,6 @@ html {
   font-weight: 400;
 }
 
-@keyframes tranform {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 #dynamic-words span {
   display: inline-block;
   animation: flash 3s linear infinite;
@@ -112,17 +119,6 @@ html {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-/* Menu Button Styling */
-.menu-button {
-  background-color: transparent;
-  color: white;
-  font-family: "Anton", sans-serif;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-size: 3rem;
 }
 
 /* Menu Page */
