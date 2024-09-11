@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brent Buell</title>
+
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="/main.js"></script>
   </head>
+
   <body>
     <!-- Hero Section -->
+
     <div class="hero" id="hero">
+      <button class="menu-button" onclick="toggleMenu()">MENU</button>
+
       <div class="hero-left">
         <h1 class="hero-title brent">BRENT</h1>
         <h2 class="hero-title buell">BUELL</h2>
@@ -17,9 +22,7 @@
           <span id="dynamic-words"></span>
         </p>
       </div>
-      <div class="menu-button">
-        <button class="menu-button" onclick="toggleMenu()">MENU</button>
-      </div>
+
       <div class="hero-right">
         <img src="BB.png" alt="Brent Buell Image" class="hero-image" />
       </div>
@@ -38,7 +41,7 @@
     </div>
 
     <!-- About Section -->
-    <!-- <div class="about-section" id="about">
+    <div class="about-section" id="about">
       <div class="panel panel-1">
         <h1>THEATER & TRANSFORMATION</h1>
         <p>
@@ -77,53 +80,6 @@
           RTA members returning to prison, compared to over 60% nationally.
         </p>
       </div>
-    </div> -->
-
-    <!-- Contact Section -->
-    <!-- <section class="section contact-form" id="contact">
-      <form
-        action="mailto:info@brentbuell.com"
-        method="post"
-        enctype="text/plain"
-      >
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            name="name"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label for="company" class="form-label">Company</label>
-          <input type="text" class="form-control" id="company" name="company" />
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea
-            class="form-control"
-            id="message"
-            name="message"
-            rows="6"
-            required
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </section>
-  </body>
-</html> -->
+    </div>
   </body>
 </html>
