@@ -12,15 +12,13 @@ html {
 
 .hero {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   background-color: #000;
-  color: #fff;
+
   padding: 0 6rem;
   position: relative;
-  flex-direction: row;
 }
 
 /* Center the menu button at the top */
