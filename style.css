@@ -244,6 +244,69 @@ html {
   transform: translate(50%, -50%);
 }
 
+@media (max-width: 768px) {
+  /* Adjust padding for the hero section */
+  .hero {
+    flex-direction: column;
+    padding: 0 2rem;
+    justify-content: center;
+  }
+
+  /* Center the hero-left content */
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Adjust font sizes for mobile */
+  .hero-left h1 {
+    font-size: 12vw;
+  }
+
+  .hero-left h2 {
+    font-size: 8vw;
+  }
+
+  .hero-left p {
+    font-size: 2.5rem;
+  }
+
+  /* Adjust the hero-right image to fit better */
+  .hero-right {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .hero-image {
+    max-height: 50vh;
+  }
+
+  /* Adjust the menu button size */
+  .menu-button {
+    font-size: 2rem;
+  }
+
+  /* Adjust dynamic words font size */
+  #dynamic-words span {
+    font-size: 5vw;
+  }
+
+  /* About section adjustments */
+  .about-section .cell-1::before,
+  .about-section .cell-2::before,
+  .about-section .cell-3::before {
+    font-size: 3rem;
+  }
+
+  .card {
+    height: 50vh;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+}
+
 /* About Section Styling */
 /* .about-section {
   background-color: #f7f7f7;
