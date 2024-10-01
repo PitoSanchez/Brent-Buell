@@ -1,5 +1,3 @@
-@import url("https://use.typekit.net/kkv4ccp.css");
-
 /* Global Styles */
 body,
 html {
@@ -8,20 +6,32 @@ html {
   box-sizing: border-box;
   font-family: "Anton", sans-serif;
   color: white;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero {
   display: flex;
-  min-height: auto;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 3rem;
   align-items: center;
   height: 100vh;
-  background-color: #000;
-  padding: 0 6rem;
-  position: relative;
+  padding: 6rem 1rem;
 }
 
-/* Center the menu button at the top */
+.hero-title {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
 .menu-button {
   position: absolute;
   top: 1rem;
@@ -33,80 +43,38 @@ html {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 2.8rem;
-  z-index: 5; /* Ensure it stays above other content */
+  font-size: 2rem;
+  z-index: 5;
 }
 
 .hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 50%;
 }
 
-.hero-left h1,
-.hero-left h2,
-.hero-left p {
+#dynamic-words {
+  display: inline-block;
+  animation: flash 3s linear infinite;
+  font-size: 1.5rem;
   margin: 0;
-}
-
-.hero-left h1 {
-  font-size: 10vw;
-  font-family: "anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.hero-left h2 {
-  font-size: 10vw;
-  color: #e5ab7f;
-  font-family: "Anton", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.hero-left p {
-  font-size: 3.5rem;
-  color: #ccc;
-  padding-left: 1rem;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.hero-left #dynamic-words {
-  color: #32cd32;
-  font-weight: 200;
-}
-
-.hero-paragraph {
-  margin-top: 1.5rem;
-  font-size: 2rem;
-  color: #bffabf;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-#dynamic-words span {
-  display: inline-block;
-  animation: flash 3s linear infinite;
-  font-size: 3.5vw;
-}
-
-/* Image Styling */
 .hero-image {
   max-width: 100%;
   height: auto;
   max-height: 95vh;
 }
 
-/* Position the image on the right */
 .hero-right {
-  max-width: 50%;
+  max-width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
-/* Menu Page */
 .menu-page {
   display: none;
   position: fixed;
@@ -129,7 +97,6 @@ html {
   color: #dcdcdc;
 }
 
-/* Menu Page Styling */
 .menu-page {
   position: fixed;
   top: 0;
@@ -153,7 +120,7 @@ html {
 
 .menu-list a {
   font-family: "Anton", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -163,129 +130,50 @@ html {
   color: yellow;
 }
 
-.about-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: black;
+/* Media Queries */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    padding: 0 2rem;
+    justify-content: space-between;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-right {
+    margin-top: 2rem;
+  }
+
+  #dynamic-words {
+    font-size: 2.5rem;
+  }
 }
 
-.row {
-  height: 90vh;
-  position: sticky;
-  bottom: 3rem;
-}
-.row-1 {
-  z-index: 3;
-}
-.row-2 {
-  z-index: 2;
-}
-.row-3 {
-  z-index: 1;
+@media (min-width: 1024px) {
+  .hero {
+    padding: 0 3rem;
+  }
+  .hero-title {
+    font-size: 4rem;
+  }
 }
 
-.cell {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+@media (min-width: 1280px) {
+  .hero {
+    padding: 0 5rem;
+  }
+  .hero-title {
+    font-size: 5rem;
+  }
 }
 
-.cell-1::before,
-.cell-2::before,
-.cell-3::before {
-  display: flex;
-  content: "About Brent";
-  font-size: 6rem;
-  width: 100%;
-  justify-content: space-around;
-  transform: translateY(2.25rem);
+@media (min-width: 1536px) {
+  .hero {
+    padding: 0 8rem;
+  }
+  .hero-title {
+    font-size: 6rem;
+  }
 }
-
-.cell-1::before {
-  color: #52b2cf;
-}
-
-.cell-2::before {
-  color: #e5a36f;
-}
-
-.cell-3::before {
-  color: #9cadce;
-}
-
-.card {
-  position: absolute;
-  width: 90%;
-  left: 5%;
-  height: 60vh;
-  border-radius: 2rem;
-  box-sizing: border-box;
-  clip: rect(auto, auto, auto, auto);
-}
-
-.card-1 {
-  background-color: #52b2cf;
-}
-.card-2 {
-  background-color: #e5a36f;
-}
-.card-3 {
-  background-color: #9cadce;
-}
-
-.content {
-  position: fixed;
-  font-size: 1.3rem;
-  width: 85%;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-}
-
-/* About Section Styling */
-/* .about-section {
-  background-color: #f7f7f7;
-  color: black;
-  overflow: hidden;
-  transition: smooth;
-}
-
-.panel {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
-  box-sizing: border-box;
-}
-
-
-.panel h1 {
-  margin-bottom: 20px;
-  font-size: 3rem;
-  color: #333;
-}
-
-.panel p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
-  font-weight: 200;
-}
-
-.panel-1 {
-  background-color: #ffc8dd;
-}
-
-.panel-2 {
-  background-color: #ffafcc;
-}
-
-.panel-3 {
-  background-color: lightskyblue;
-} */

@@ -1,15 +1,14 @@
-import "./style.css"
-
+// Toggle Menu Functionality
 function toggleMenu() {
     const menu = document.getElementById('menuPage');
     if (menu) {
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        menu.classList.toggle('active');
     }
 }
 
-window.toggleMenu = toggleMenu
+window.toggleMenu = toggleMenu;
 
-// JavaScript for dynamic words
+// Dynamic Words Animation
 const words = ['PRODUCER', 'NOVELIST', 'PLAYWRIGHT', 'DIRECTOR'];
 let currentIndex = 0;
 const dynamicWordsElement = document.getElementById('dynamic-words');
@@ -19,5 +18,5 @@ function updateWord() {
     currentIndex = (currentIndex + 1) % words.length;
 }
 
-setInterval(updateWord, 2000);
-updateWord(); // Initial call to set the first word
+setInterval(updateWord, 4000);
+document.addEventListener('DOMContentLoaded', updateWord);
