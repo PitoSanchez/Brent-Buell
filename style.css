@@ -7,7 +7,6 @@ html {
   font-family: "Anton", sans-serif;
   color: white;
   background-color: #000;
-  overflow-x: hidden;
 }
 
 body {
@@ -17,6 +16,7 @@ body {
 }
 
 .hero {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -31,21 +31,6 @@ body {
   height: auto;
   border-radius: 10px;
   margin-top: 5rem;
-}
-
-.menu-button {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: transparent;
-  color: white;
-  font-family: "Anton", sans-serif;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-size: 2rem;
-  z-index: 5;
 }
 
 .hero-left {
@@ -64,16 +49,28 @@ body {
 }
 
 .hero-image {
-  max-width: 100%;
   height: auto;
-  max-height: 95vh;
 }
 
 .hero-right {
-  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu-button {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: white;
+  font-family: "Anton", sans-serif;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 5;
 }
 
 .menu-page {
@@ -131,38 +128,46 @@ body {
   color: yellow;
 }
 
+.left-svg {
+  display: none;
+  position: absolute;
+  left: 25px;
+  top: 1000px;
+  width: calc((100vw - 1380px) / 2);
+  height: auto;
+}
+
+.right-svg {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 2000px;
+  width: calc((100vw - 1380px) / 2);
+  height: auto;
+}
+
 /* About Section */
 
-.about-container {
-  margin: 20px auto;
+.about-section {
+  overflow: hidden;
   padding: 20px;
   background-color: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: url("/assets/theater.webp") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
-}
-
-h1 {
-  text-align: center;
-  font-size: 4.5em;
-  margin-bottom: 20px;
-  color: white;
-  margin-top: -5rem;
-  margin-bottom: 10rem;
-}
-
-p {
   line-height: 2;
   font-size: 1.2em;
-  margin-bottom: 15px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
 }
 
-em {
-  font-style: italic;
+.about-section-header {
+  text-align: center;
+  font-size: 4.5em;
+  color: white;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
 }
 
 /* Media Queries */
@@ -205,6 +210,10 @@ em {
 }
 
 @media (min-width: 1536px) {
+  .left-svg,
+  .right-svg {
+    display: block;
+  }
   .hero {
     padding: 0 8rem;
   }
