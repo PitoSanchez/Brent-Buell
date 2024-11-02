@@ -7,7 +7,9 @@
 
     <link rel="stylesheet" href="https://use.typekit.net/kkv4ccp.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="books.css" />
     <script type="module" src="/main.js"></script>
+    <script src="books.js"></script>
   </head>
 
   <body>
@@ -101,6 +103,32 @@
         justice and humanity. Welcome to his world, where storytelling breaks
         barriers and redefines what it means to be human.
       </p>
+    </section>
+
+    <!-- Books Carousel Section -->
+    <section id="books" class="books-section">
+      <h2 class="books-section-header">Books</h2>
+      <div class="carousel-container">
+        <button class="carousel-button prev" onclick="moveSlide(-1)">
+          &#10094;
+        </button>
+        <div class="carousel">
+          <div class="carousel-slide">
+            <img
+              src="/assets/newlives.webp"
+              alt="Performing New Lives by Jonathan Shailor"
+            />
+            <h3>Performing New Lives</h3>
+            <p>By Jonathan Shailor</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/rapt.webp" alt="Rapturous by Brent Buell" />
+            <h3>Rapturous</h3>
+            <p>By Brent Buell</p>
+          </div>
+          <!-- Additional slides can be added here -->
+        </div>
+      </div>
     </section>
   </body>
 </html>

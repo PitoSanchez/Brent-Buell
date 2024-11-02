@@ -20,3 +20,14 @@ function updateWord() {
 
 setInterval(updateWord, 4000);
 document.addEventListener('DOMContentLoaded', updateWord);
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    document.querySelector('.carousel').style.transform = `translateX(${-currentSlide * 100}%)`;
+}
+
+window.toggleMenu = toggleMenu;
+
