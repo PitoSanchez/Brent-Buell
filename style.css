@@ -148,26 +148,55 @@ body {
 
 /* About Section */
 
+/* About Section */
 .about-section {
   overflow: hidden;
-  padding: 20px;
-  background-color: black;
-  background: url("/assets/theater.webp") no-repeat center center fixed;
+  padding: 2rem;
+  background: url("/assets/photos/brentdesk.webp") no-repeat center center;
   background-size: cover;
-  height: 100%;
-  width: 100%;
-  line-height: 2;
-  font-size: 1.2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 400;
+  color: #fff;
+  font-family: "Georgia", serif;
+  line-height: 1.8;
 }
 
-.about-section-header {
+.about-section h1.about-section-header {
   text-align: center;
-  font-size: 4.5em;
-  color: white;
-  margin-top: 5rem;
-  margin-bottom: 10rem;
+  font-size: 6rem;
+  margin-top: -7rem;
+  margin-bottom: 3rem;
+}
+
+#about .about-content p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    padding: 4rem;
+  }
+
+  .about-section-header {
+    font-size: 3rem;
+  }
+
+  .about-content p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-section {
+    padding: 6rem;
+  }
+
+  .about-section-header {
+    font-size: 3.5rem;
+  }
+
+  .about-content p {
+    font-size: 1.3rem;
+  }
 }
 
 /* Books Section */
