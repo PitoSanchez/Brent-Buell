@@ -1,9 +1,7 @@
 // Toggle Menu Functionality
 function toggleMenu() {
     const menu = document.getElementById('menuPage');
-    if (menu) {
-        menu.classList.toggle('active');
-    }
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
 }
 
 window.toggleMenu = toggleMenu;
@@ -14,20 +12,21 @@ let currentIndex = 0;
 const dynamicWordsElement = document.getElementById('dynamic-words');
 
 function updateWord() {
-    dynamicWordsElement.innerHTML = `<span>${words[currentIndex]}</span>`;
+    dynamicWordsElement.textContent = words[currentIndex];
     currentIndex = (currentIndex + 1) % words.length;
 }
 
 setInterval(updateWord, 4000);
 document.addEventListener('DOMContentLoaded', updateWord);
 
+// Carousel Functionality
 let currentSlide = 0;
 
 function moveSlide(direction) {
-    const slides = document.querySelectorAll('.carousel-slide');
+    const slides = document.querySelectorAll('.carousel .item');
     currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    document.querySelector('.carousel').style.transform = `translateX(${-currentSlide * 100}%)`;
+    const offset = -currentSlide * 100;
+    document.querySelector('.carousel .list').style.transform = `translateX(${offset}%)`;
 }
 
-window.toggleMenu = toggleMenu;
-
+window.moveSlide = moveSlide;
