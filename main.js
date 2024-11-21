@@ -1,7 +1,9 @@
+import { Carousel } from "./carousel";
+
 // Toggle Menu Functionality
 function toggleMenu() {
     const menu = document.getElementById('menuPage');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
 
 window.toggleMenu = toggleMenu;
@@ -19,14 +21,6 @@ function updateWord() {
 setInterval(updateWord, 4000);
 document.addEventListener('DOMContentLoaded', updateWord);
 
-// Carousel Functionality
-let currentSlide = 0;
 
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.carousel .item');
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel .list').style.transform = `translateX(${offset}%)`;
-}
+new Carousel("carousel-1")
 
-window.moveSlide = moveSlide;
