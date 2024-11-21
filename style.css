@@ -175,7 +175,7 @@ body {
 .books-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   padding: 20px;
   background-color: #111;
@@ -236,7 +236,7 @@ body {
 
 /* Carousel Container */
 
-.carousel {
+/* .carousel {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -290,7 +290,7 @@ body {
   to {
     width: 100%;
   }
-}
+} */
 
 /* Media Queries */
 @media (min-width: 768px) {
