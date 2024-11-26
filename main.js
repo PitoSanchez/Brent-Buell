@@ -23,4 +23,5 @@ document.addEventListener('DOMContentLoaded', updateWord);
 
 
 new Carousel("carousel-1")
+new Carousel("carousel-2")
 
