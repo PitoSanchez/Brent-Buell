@@ -239,3 +239,19 @@ body {
   text-align: center;
   margin-bottom: 0.2rem;
 }
+
+.contact-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-link-text {
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: whitesmoke;
+}
+
+.contact-link-img {
+  height: auto;
+  width: 4rem;
+}
