@@ -16,13 +16,34 @@ body {
 }
 
 .hero {
+  position: relative;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   align-items: center;
+  margin-top: 6rem;
   padding: 1rem;
-  margin: 6rem 0;
-  margin-bottom: 2rem;
+  padding-bottom: 0;
+}
+
+.hero:hover {
+  --active: 1;
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at calc(var(--x) * 1px) calc(var(--y) * 1px),
+    hsla(0, 0%, 100%, 0.317),
+    transparent 20vmin
+  );
+  background-attachment: fixed;
+  opacity: var(--active, 0);
+  transition: opacity 0.2s;
+  pointer-events: none;
 }
 
 .hero-title {
@@ -49,10 +70,11 @@ body {
 }
 
 .hero-image {
-  width: 90%;
+  object-fit: scale-down;
 }
 
 .hero-right {
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +137,6 @@ body {
 
 /* About Section */
 .about-section {
-  margin-top: -3rem; /* Closer to Hero Section */
   padding: 4rem;
   background: url("/assets/photos/brentdesk.webp") no-repeat center center fixed;
   background-size: cover;
