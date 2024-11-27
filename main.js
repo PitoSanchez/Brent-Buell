@@ -21,7 +21,16 @@ function updateWord() {
 setInterval(updateWord, 4000);
 document.addEventListener('DOMContentLoaded', updateWord);
 
+// add spotlight
 
+function updateCursor({ x, y }) {
+    document.documentElement.style.setProperty('--x', x)
+    document.documentElement.style.setProperty('--y', y)
+}
+
+document.body.addEventListener('pointermove', updateCursor)
+
+// add carousels
 new Carousel("carousel-1")
 new Carousel("carousel-2")
 
