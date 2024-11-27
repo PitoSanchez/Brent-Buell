@@ -49,7 +49,7 @@ body {
 }
 
 .hero-image {
-  height: auto;
+  width: 90%;
 }
 
 .hero-right {
@@ -124,7 +124,7 @@ body {
   line-height: 1.8;
 }
 
-.about-section-header {
+.section-header {
   text-align: center;
   font-size: 3rem;
   margin-top: 7rem;
@@ -139,19 +139,26 @@ body {
 /* Books Section */
 .books-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   justify-content: center;
   padding: 20px;
   background-color: #111;
-  margin-top: 0.1rem; /* Reduced gap between About and Books */
-  border-radius: 8px;
 }
 
-.books-section > h2 {
+.books-section-header {
   font-size: 5rem; /* Center-aligned and larger title */
   text-align: center;
   margin-bottom: 3rem;
+}
+
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 0.1rem; /* Reduced gap between About and Books */
 }
 
 .book-card {
@@ -206,8 +213,8 @@ body {
   padding-bottom: 2rem;
 }
 
-.gallery-section > h2 {
-  font-size: 5rem; /* Center-aligned and larger title */
+.gallery-section-header {
+  font-size: 5rem;
   text-align: center;
   margin-bottom: 0.2rem;
 }
